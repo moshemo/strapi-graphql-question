@@ -1,0 +1,21 @@
+{
+  "connection": "default",
+  "collectionName": "sources",
+  "info": {
+    "name": "Sources"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "URL": {
+      "type": "string"
+    }
+  }
+}

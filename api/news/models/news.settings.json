@@ -1,0 +1,49 @@
+{
+  "connection": "default",
+  "collectionName": "news",
+  "info": {
+    "name": "News"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Summary": {
+      "type": "text"
+    },
+    "Date": {
+      "type": "date"
+    },
+    "categories": {
+      "collection": "categories",
+      "via": "news"
+    },
+    "tags": {
+      "collection": "tags",
+      "via": "news"
+    },
+    "source": {
+      "model": "sources"
+    },
+    "author": {
+      "model": "author"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Published",
+        "Review",
+        "Draft"
+      ]
+    },
+    "URL": {
+      "type": "string"
+    }
+  }
+}
